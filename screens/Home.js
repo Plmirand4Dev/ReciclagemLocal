@@ -2,8 +2,6 @@ import { View, Text, StyleSheet, StatusBar, VirtualizedList, Button } from 'reac
 import React, { useState } from 'react';
 import { Skeleton, Box, Image, VStack, Center, NativeBaseProvider } from 'native-base';
 
-
-// const Example = () => {
 export default function Home({ navigation }) {
     const [isLoaded, setIsLoaded] = useState(false);
     const [text, setText] = useState('');
@@ -11,7 +9,7 @@ export default function Home({ navigation }) {
         setIsLoaded(true);
         setText('Lose yourself in the greens of nature, the ones that make you strong. Come visit us at the Greenway Park, and we will be happy to show you around.');
     }, 5000);
-    return (<Center w='100%'>
+    return (<Center w='100%' mt="5">
         <Box w='90%' maxWidth='400'>
             <VStack maxWidth='400' borderWidth='1' space={8} overflow='hidden' rounded='md' _dark={{
                 borderColor: 'coolGray.500'
@@ -35,12 +33,3 @@ export default function Home({ navigation }) {
         </Box>
     </Center>)
 }
-// export default () => {
-// return (
-//   <NativeBaseProvider>
-//     <Center flex={1} px='3'>
-//         <Example />
-//     </Center>
-//   </NativeBaseProvider>
-// );
-// }

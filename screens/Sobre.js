@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Heading, AspectRatio, Image, Text, Center, HStack, Stack, NativeBaseProvider, Avatar, ScrollView, VStack, Container } from "native-base";
 
 const Example = () => {
-    return <Box alignItems="center" mt="1">
+    return <Box alignItems="center" >
         <Box maxW="80" rounded="lg" overflow="hidden" borderColor="coolGray.200" borderWidth="1" _dark={{
             borderColor: "coolGray.600",
             backgroundColor: "gray.700"
@@ -88,7 +88,7 @@ const Example = () => {
 export default () => {
     return (
         <NativeBaseProvider>
-            <Center flex={1} px="8">
+            <Center flex={1} px="4">
                 <Example />
             </Center>
         </NativeBaseProvider>

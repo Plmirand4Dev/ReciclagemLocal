@@ -15,8 +15,8 @@ const Tab = createBottomTabNavigator();
 function App() {
     return (
         <NativeBaseProvider>
-            <NavigationContainer>
-                <Drawer.Navigator initialRouteName='Login'
+            <NavigationContainer independent={true}>
+                <Drawer.Navigator initialRouteName='Home'
                     screenOptions={{
                         headerTitleAlign: 'center',
                         headerStyle: { backgroundColor: "#009990" },

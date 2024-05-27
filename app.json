@@ -13,7 +13,7 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "googleServicesFile": "./GoogleService-Info.plist",
+      "googleServicesFile": "GoogleService-Info.plist",
       "bundleIdentifier": "com.lucas-developer.reciclagem-local",
       "buildNumber": "1",
       "supportsTablet": true
@@ -49,6 +49,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "37a75375-f580-4ed5-956d-c7694d186e8a"
+      }
     }
   }
 }
