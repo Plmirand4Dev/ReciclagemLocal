@@ -1,34 +1,23 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NativeBaseProvider } from 'native-base';
+// 
 
-import Home from '../screens/Home';
-import Sobre from '../screens/Sobre';
-import Login from '../screens/Login';
+import { StatusBar } from "expo-status-bar";
+import { NativeBaseProvider } from "native-base";
+// import { UserProvider } from "./src/contexts/UserContext";
+import { Routes } from "../routes/routes";
+import { useEffect, useState } from "react";
+import { LogBox } from "react-native";
+import auth from "@react-native-firebase/auth";
+// import { FirebaseProvider } from "./src/contexts/FirebaseContext";
 
-const Stack = createNativeStackNavigator();
-const Drawer = createDrawerNavigator();
-const Tab = createBottomTabNavigator();
-
-function App() {
+export default function App() {
     return (
         <NativeBaseProvider>
-            <NavigationContainer independent={true}>
-                <Drawer.Navigator initialRouteName='Home'
-                    screenOptions={{
-                        headerTitleAlign: 'center',
-                        headerStyle: { backgroundColor: "#009990" },
-                        headerTintColor: '#fff'
-                    }}>
-                    <Drawer.Screen name='Home' component={Home} options={{ title: "Home" }} />
-                    <Drawer.Screen name='Sobre' component={Sobre} options={{ title: "Sobre Nós" }} />
-                    <Drawer.Screen name="Login" options={{ headerShown: false }} component={Login} />
-                </Drawer.Navigator>
-            </NavigationContainer>
+            <FirebaseProvider>
+                {/* <UserProvider> */}
+                <StatusBar style="auto" />
+                <Routes />
+                {/* </UserProvider> */}
+            </FirebaseProvider>
         </NativeBaseProvider>
-    )
+    );
 }
-
-export default App;
