@@ -2,7 +2,7 @@
 
 import { StatusBar } from "expo-status-bar";
 import { NativeBaseProvider } from "native-base";
-// import { UserProvider } from "./src/contexts/UserContext";
+import { UserProvider } from "../contexts/UserContext";
 import { Routes } from "../routes/routes";
 import { useEffect, useState } from "react";
 import { LogBox } from "react-native";
@@ -13,10 +13,10 @@ export default function App() {
     return (
         <NativeBaseProvider>
             <FirebaseProvider>
-                {/* <UserProvider> */}
-                <StatusBar style="auto" />
-                <Routes />
-                {/* </UserProvider> */}
+                <UserProvider>
+                    <StatusBar style="auto" />
+                    <Routes />
+                </UserProvider>
             </FirebaseProvider>
         </NativeBaseProvider>
     );
