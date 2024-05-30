@@ -1,15 +1,15 @@
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
-import { NavigationContainer, ParamListBase } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { Text } from "native-base";
 import { View } from "react-native";
 import Home from "../screens/Home";
 import Icon from "react-native-vector-icons/AntDesign";
 import Sobre from "../screens/Sobre";
 
+
 type ITabRoutes = {
-    home: undefined;
+    Home: undefined;
     Sobre: undefined;
-    Setting: undefined;
 };
 
 const Tab = createMaterialBottomTabNavigator<ITabRoutes>();
@@ -17,54 +17,31 @@ const Tab = createMaterialBottomTabNavigator<ITabRoutes>();
 interface IMyTabs { }
 export const Routes: React.FunctionComponent<IMyTabs> = () => {
     return (
-        <NavigationContainer>
+        <NavigationContainer independent={true}>
             <Tab.Navigator>
                 <Tab.Screen
-                    name="Settings"
-                    component={Screen}
-                    options={{
-                        title: "Configurações",
-                        tabBarIcon: () => <Icon name="setting" size={20} color="purple" />,
-                    }}
-                />
-                <Tab.Screen
-                    name="Home"
+                    name="Dashboard"
                     component={Home}
                     options={{
-                        title: "Home",
+                        title: "Dashboard",
                         tabBarIcon: () => (
-                            <Icon name="Home" size={20} color="green" />
+                            <Icon name="dashboard" size={20} color="purple" />
                         ),
                     }}
                 />
                 <Tab.Screen
-                    name="Sobre"
+                    name="Profile"
                     component={Sobre}
                     options={{
-                        title: "Sobre",
-                        tabBarIcon: () => <Icon name="user" size={20} color="green" />,
+                        title: "Perfil",
+                        tabBarIcon: () => <Icon name="user" size={20} color="purple" />,
                     }}
                 />
             </Tab.Navigator>
-        </NavigationContainer>
+        </NavigationContainer >
     );
 };
 
 export function generateRandomColorHexadecimal() {
     return "#" + Math.floor(Math.random() * 16777215).toString(16);
 }
-
-const Screen = () => {
-    return (
-        <View
-            style={{
-                flex: 1,
-                backgroundColor: generateRandomColorHexadecimal(),
-                justifyContent: "center",
-                alignItems: "center",
-            }}
-        >
-            <Text>{Math.random()}</Text>
-        </View>
-    );
-};
