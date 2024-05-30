@@ -2,13 +2,14 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { NavigationContainer } from "@react-navigation/native";
 import { Text } from "native-base";
 import { View } from "react-native";
-import Home from "../screens/Home";
 import Icon from "react-native-vector-icons/AntDesign";
+import Home from "../screens/Home";
 import Sobre from "../screens/Sobre";
+import Locais from "../screens/Locais";
 
 
 type ITabRoutes = {
-    Home: undefined;
+    Locais: undefined;
     Sobre: undefined;
 };
 
@@ -20,21 +21,31 @@ export const Routes: React.FunctionComponent<IMyTabs> = () => {
         <NavigationContainer independent={true}>
             <Tab.Navigator>
                 <Tab.Screen
-                    name="Dashboard"
+                    name="Home"
                     component={Home}
                     options={{
-                        title: "Dashboard",
+                        title: "Home",
                         tabBarIcon: () => (
-                            <Icon name="dashboard" size={20} color="purple" />
+                            <Icon name="home" size={20} color="green" />
                         ),
                     }}
                 />
                 <Tab.Screen
-                    name="Profile"
+                    name="Locais"
+                    component={Locais}
+                    options={{
+                        title: "Locais",
+                        tabBarIcon: () => (
+                            <Icon name="enviroment" size={20} color="green" />
+                        ),
+                    }}
+                />
+                <Tab.Screen
+                    name="Sobre"
                     component={Sobre}
                     options={{
-                        title: "Perfil",
-                        tabBarIcon: () => <Icon name="user" size={20} color="purple" />,
+                        title: "Sobre",
+                        tabBarIcon: () => <Icon name="team" size={20} color="green" />,
                     }}
                 />
             </Tab.Navigator>
