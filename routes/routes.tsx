@@ -6,6 +6,7 @@ import Icon from "react-native-vector-icons/AntDesign";
 import Home from "../screens/Home";
 import Sobre from "../screens/Sobre";
 import Locais from "../screens/Locais";
+import Profile from "../screens/ProfileScreen";
 
 
 type ITabRoutes = {
@@ -46,6 +47,14 @@ export const Routes: React.FunctionComponent<IMyTabs> = () => {
                     options={{
                         title: "Sobre",
                         tabBarIcon: () => <Icon name="team" size={20} color="green" />,
+                    }}
+                />
+                <Tab.Screen
+                    name="Perfil"
+                    component={Profile}
+                    options={{
+                        title: "Perfil",
+                        tabBarIcon: () => <Icon name="user" size={20} color="green" />,
                     }}
                 />
             </Tab.Navigator>

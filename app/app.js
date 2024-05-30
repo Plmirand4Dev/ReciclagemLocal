@@ -7,17 +7,17 @@ import { Routes } from "../routes/routes";
 import { useEffect, useState } from "react";
 import { LogBox } from "react-native";
 import auth from "@react-native-firebase/auth";
-// import { FirebaseProvider } from "./src/contexts/FirebaseContext";
+import { FirebaseProvider } from "../contexts/FirebaseContext";
 
 export default function App() {
     return (
         <NativeBaseProvider>
-            {/* <FirebaseProvider> */}
-            {/* <UserProvider> */}
-            <StatusBar style="auto" />
-            <Routes />
-            {/* </UserProvider> */}
-            {/* </FirebaseProvider> */}
+            <FirebaseProvider>
+                {/* <UserProvider> */}
+                <StatusBar style="auto" />
+                <Routes />
+                {/* </UserProvider> */}
+            </FirebaseProvider>
         </NativeBaseProvider>
     );
 }
