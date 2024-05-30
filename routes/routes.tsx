@@ -6,12 +6,13 @@ import Icon from "react-native-vector-icons/AntDesign";
 import Home from "../screens/Home";
 import Sobre from "../screens/Sobre";
 import Locais from "../screens/Locais";
-import Profile from "../screens/ProfileScreen";
+import { Profile } from "../screens/ProfileScreen";
 
 
 type ITabRoutes = {
     Locais: undefined;
     Sobre: undefined;
+    Profile: undefined;
 };
 
 const Tab = createMaterialBottomTabNavigator<ITabRoutes>();
