@@ -6,13 +6,13 @@ import Icon from "react-native-vector-icons/AntDesign";
 import Home from "../screens/Home";
 import Sobre from "../screens/Sobre";
 import Locais from "../screens/Locais";
-import { Profile } from "../screens/ProfileScreen";
+import { ProfileScreen } from "../screens/ProfileScreen";
 
 
 type ITabRoutes = {
     Locais: undefined;
     Sobre: undefined;
-    Profile: undefined;
+    ProfileScreen: undefined;
 };
 
 const Tab = createMaterialBottomTabNavigator<ITabRoutes>();
@@ -52,7 +52,7 @@ export const Routes: React.FunctionComponent<IMyTabs> = () => {
                 />
                 <Tab.Screen
                     name="Perfil"
-                    component={Profile}
+                    component={ProfileScreen}
                     options={{
                         title: "Perfil",
                         tabBarIcon: () => <Icon name="user" size={20} color="green" />,
