@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "752057678382",
+    "project_id": "reciclagem-local",
+    "storage_bucket": "reciclagem-local.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:752057678382:android:00d0cd5fd2d69e65673dbf",
+        "android_client_info": {
+          "package_name": "com.lucasDeveloper.reciclagemLocal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "752057678382-bl2reeqrcuc5kbc62k4tmpu50cb9mpp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjhNF3HxU35ALevsEcbcqlD3SJFRojvds"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "752057678382-bl2reeqrcuc5kbc62k4tmpu50cb9mpp3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "752057678382-pgom51ifkbd4sv9pnvq6n074sr069tpc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lucas-developer.reciclagem-local"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
